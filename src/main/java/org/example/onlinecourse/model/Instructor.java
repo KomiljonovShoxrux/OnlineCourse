@@ -1,6 +1,7 @@
 package org.example.onlinecourse.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 
 import java.util.List;
 
@@ -15,6 +16,7 @@ public class Instructor {
     @Column(nullable = false)
     private Integer experienceYears;
     @Column(nullable = false)
+    @Email
     private String email;
     @OneToMany
     private List<Course> course_id;
